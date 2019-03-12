@@ -16,7 +16,7 @@
    1. The activity id is replaced by its name, indicated in the file `activity_labels.txt`.
 
 4. Appropriately labels the data set with descriptive variable names.
-   1. This was done in step one.
+   1. Renamed column names by deleting special characters and expanding abreviations.
 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
    1. The mean is calculated.
