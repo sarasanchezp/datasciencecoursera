@@ -76,8 +76,5 @@ dataset_cols <- gsub("std", "StandardDeviation", dataset_cols)
 colnames(dataset) <- dataset_cols
 
 # 5- From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-#dataset_mean <- aggregate(. ~subject_id + activity_id, dataset, mean)
-#dataset_mean[order(dataset_mean$subject_id, dataset_mean$activity_id), ]
-
 dataset_mean <- dataset %>% group_by(subject_id, activity_name) %>%  summarise_each(funs(mean))
 write.table(dataset_mean, "tidyDataSet.txt", row.name=FALSE, quote = FALSE)
